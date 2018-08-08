@@ -24,6 +24,9 @@ public class MainActivity extends AppCompatActivity {
         etURL = findViewById(R.id.editTextURL);
 
         wvMyPage.setWebViewClient(new WebViewClient());
+        wvMyPage.getSettings().setAllowFileAccess(false);
+        wvMyPage.getSettings().setBuiltInZoomControls(true);
+        wvMyPage.getSettings().setJavaScriptEnabled(true);
 
         btnLoadURL.setOnClickListener(new View.OnClickListener() {
             @Override
